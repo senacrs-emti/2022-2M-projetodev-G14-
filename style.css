@@ -8,12 +8,13 @@
 	margin: 0;
 	padding: 0;
 }
-
-/* div com Nome e Imagem do pokemon */
-.nomeEImg{
+/* tudo dentro da caixinha branca */
+.pokemonResultado {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+}
+/* info dos pokemons (info da esquerda) */
+.infoPokemon span{
+	font-size:13px;
 }
 /* div só da imagem (para modificar a img) */
 .imgPokemon img{
@@ -21,7 +22,8 @@
 }
 
 input#pokemonInput{
-	border:4px solid transparent;
+	border:1px solid black;
+	border-radius:10px;
 	background-color: #09dc09;
 	width: 90%;
 	margin: 7vh 0 0 2vh;

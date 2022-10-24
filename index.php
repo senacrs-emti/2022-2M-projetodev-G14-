@@ -41,21 +41,21 @@
             <?php
                 if(isset($_SESSION['pokemonProcurado'])) {
                     echo '<div class="pokemonResultado">';
-                        echo '<div class="nomeEImg">';
+                        echo '<div class="infoPokemon">';
                             $resultObj = new StdClass;
-                            echo 'Nome: ' . $resultObj->nome = $_SESSION['nomePokemon'] . '<br>';
-                            echo '<div class="imgPokemon">';
-                                echo '<img src=' . $_SESSION['imgPokemon'] . '>';
-                            echo '</div>';
+                            echo '<span>'.'<b>'.'Nome:' .'</b>' . $resultObj->nome = $_SESSION['nomePokemon'] .'</span>'.'<br>';
+                            echo '<span>'.'<b>'.'Habilidade: '.'</b>' . $resultObj->habilidade1 = $_SESSION['habilidade1Pokemon'] .'</span>'.'<br>';
+                            if(isset($_SESSION['habilidade2Pokemon'])) {
+                                echo '<span>'.'<b>'.'Habilidade: '.'</b>' . $resultObj->habilidade2 = $_SESSION['habilidade2Pokemon'] . '</span>'.'<br>';
+                            }
+                            echo '<span>'.'<b>'.'Tipo: '.'</b>' . $resultObj->tipo1Pokemon = $_SESSION['tipo1Pokemon'] .'</span>'. '<br>';
+                            if(isset($_SESSION['tipo2Pokemon'])) {
+                                echo '<span>'.'<b>'.'Tipo: '.'</b>' . $resultObj->tipo2Pokemon = $_SESSION['tipo2Pokemon'] .'</span>' .'<br>';
+                            }
                         echo '</div>';
-                        echo 'Habilidade: ' . $resultObj->habilidade1 = $_SESSION['habilidade1Pokemon'] . '<br>';
-                        if(isset($_SESSION['habilidade2Pokemon'])) {
-                            echo 'Habilidade: ' . $resultObj->habilidade2 = $_SESSION['habilidade2Pokemon'] . '<br>';
-                        }
-                        echo 'Tipo: ' . $resultObj->tipo1Pokemon = $_SESSION['tipo1Pokemon'] . '<br>';
-                        if(isset($_SESSION['tipo2Pokemon'])) {
-                            echo 'Tipo: ' . $resultObj->tipo2Pokemon = $_SESSION['tipo2Pokemon'] . '<br>';
-                        }
+                        echo '<div class="imgPokemon">';
+                            echo '<img src=' . $_SESSION['imgPokemon'] . '>';
+                        echo '</div>';
                     echo '</div>';
 
                     session_destroy();
