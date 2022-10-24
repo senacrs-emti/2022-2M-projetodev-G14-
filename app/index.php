@@ -3,8 +3,16 @@
 $nome = $_GET['pokemon'];
 
 function getPokemon($nome) {
+
+    $arrContextOptions=array(
+        "ssl"=>array(
+            "verify_peer"=>false,
+            "verify_peer_name"=>false,
+        ),
+    );
+
     $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
-    $data = file_get_contents($linkApi);
+    $data = file_get_contents($linkApi, false, stream_context_create($arrContextOptions));
     $pokemon = json_decode($data);
     echo 'Nome: ' . $pokemon->name . '<br>';
     echo 'Habilidade: ' . $pokemon->abilities[0]->ability->name . '<br>';
