@@ -36,10 +36,11 @@
             <div id="buttontopPicture1"></div>
             <div id="buttontopPicture2"></div>
         </div>
-        <div id="picture" class="tela">
+        <div id="picture">
             <!-- <img src="" alt="" height="170" /> -->
             <?php
                 if(isset($_SESSION['pokemonProcurado'])) {
+<<<<<<< HEAD
                     echo '<div class="pokemonResultado">';
                         echo '<div class="infoPokemon">';
                             $resultObj = new StdClass;
@@ -53,10 +54,23 @@
                                 echo '<span>'.'<b>'.'Tipo: '.'</b>' . $resultObj->tipo2Pokemon = $_SESSION['tipo2Pokemon'] .'</span>' .'<br>';
                             }
                         echo '</div>';
+=======
+                    echo '<div class="nomeEImg">';
+                        $resultObj = new StdClass;
+                        echo 'Nome: ' . $resultObj->nome = $_SESSION['nomePokemon'] . '<br>';
+>>>>>>> parent of c65c4b7 (atu)
                         echo '<div class="imgPokemon">';
                             echo '<img src=' . $_SESSION['imgPokemon'] . '>';
                         echo '</div>';
                     echo '</div>';
+                    echo 'Habilidade: ' . $resultObj->habilidade1 = $_SESSION['habilidade1Pokemon'] . '<br>';
+                    if(isset($_SESSION['habilidade2Pokemon'])) {
+                        echo 'Habilidade: ' . $resultObj->habilidade2 = $_SESSION['habilidade2Pokemon'] . '<br>';
+                    }
+                    echo 'Tipo: ' . $resultObj->tipo1Pokemon = $_SESSION['tipo1Pokemon'] . '<br>';
+                    if(isset($_SESSION['tipo2Pokemon'])) {
+                        echo 'Tipo: ' . $resultObj->tipo2Pokemon = $_SESSION['tipo2Pokemon'] . '<br>';
+                    }
 
                     session_destroy();
                 }

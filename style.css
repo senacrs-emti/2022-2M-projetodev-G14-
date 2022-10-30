@@ -8,9 +8,14 @@
 	margin: 0;
 	padding: 0;
 }
+<<<<<<< HEAD
 
 /* tudo dentro da caixinha branca */
 .pokemonResultado {
+=======
+/* div com Nome e Imagem do pokemon */
+.nomeEImg{
+>>>>>>> parent of c65c4b7 (atu)
 	display: flex;
 }
 /* info dos pokemons (info da esquerda) */
