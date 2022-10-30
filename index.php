@@ -91,8 +91,8 @@
             </div>
             </div>
         </div>
-        <div class="page turn"></div>
         <div class="right turn" id="right">
+        <div class="page turn"></div>
             <div id="stats">
                 <form action="app/index.php" method="get">
                     <input type="text" name="pokemon" id="pokemonInput">

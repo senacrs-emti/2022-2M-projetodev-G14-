@@ -1075,12 +1075,28 @@ input#pokemonInput:active{
 }
 
 /*================= TESTES ==================== */
-
 .right{
+	transform: rotateY(0deg);
+}
+
+.page {
+	width: 350px;
+	height: 500px;
+	float: left;
+	background-color: #000;
+	transform: rotateY(0deg);
+  }
+
+.right, .page{
+	position: absolute;
 	transform-origin: 100% 0%;
 }
 .right.turn {
 	animation: bookCover 3s forwards;
+  }
+
+.page.turn {
+	animation: bookOpen 3s forwards;
   }
 
   @keyframes bookOpen {

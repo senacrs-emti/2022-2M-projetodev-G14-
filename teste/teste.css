@@ -1,26 +1,47 @@
 body {
   background-color: #4F4E68;
 }
+.book {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 18.5rem;
+  height: 12.5rem;
+  perspective: 70rem;
+}
+.cover {
+  background-color: #1b14ee;
+  transform: rotateY(0deg);
+  width: 9.25rem;
+  height: 12.5rem;
+}
+.page {
+  top: 0.25rem;
+  left: 0.25rem;
+  background-color: #e9e6c4;
+  transform: rotateY(0deg);
+  width: 9rem;
+  height: 12rem;
+  text-align: right;
+  font-size: 8px;
+  color: #777;
+  font-family: monospace;
+}
+
 .cover, .page {
   position: absolute;
   padding: 1rem;
-  transform-origin: 100% 0%;
-  box-shadow: inset 3px 0px 20px rgba(0, 0, 0, 0.2),
-    0px 0px 15px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  transform-origin: 100% 0;
+  border-radius: 5px 0 0 5px;
 }
 .cover.turn {
   animation: bookCover 3s forwards;
 }
 .page.turn {
-  animation: pageOpen 3s forwards;
-}
-
-@keyframes pageOpen{
-    30% {z-index: 1999;}
-    100% { transform: rotateY(-180deg);
-        z-index: 10000;
-    }
+  animation: bookOpen 3s forwards;
 }
 
 @keyframes bookOpen {
@@ -33,3 +54,4 @@ body {
   100% {  transform: rotateY(180deg);
     z-index: 1;}
 }
+
