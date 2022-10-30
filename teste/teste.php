@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="teste.css">
 </head>
 <body>
-    <span class="cover"></span>
-    <span class="cover turn"></span>
-    </div>
+    <div class="book">
+  <span class="cover"></span>
+  <span class="page"></span>
+  <span class="cover turn"></span>
+</div>
 </body>
 </html>

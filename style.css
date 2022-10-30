@@ -67,7 +67,7 @@ input#pokemonInput:active{
 		width: 350px;
 		height: 500px;
 		float: left;
-		position: relative;
+		position: absolute;
 	}
 
 
@@ -1073,3 +1073,25 @@ input#pokemonInput:active{
 	}
 
 }
+
+/*================= TESTES ==================== */
+
+.right{
+	transform-origin: 100% 0%;
+}
+.right.turn {
+	animation: bookCover 3s forwards;
+  }
+
+  @keyframes bookOpen {
+	30% { z-index: 999 }
+	100% {  transform: rotateY(180deg);
+	  z-index: 999;}
+  }
+  @keyframes bookCover {
+	30% { z-index: 999 }
+	100% {  transform: rotateY(180deg);
+	  z-index: 1;}
+  }
+  
+  
