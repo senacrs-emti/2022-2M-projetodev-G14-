@@ -9,8 +9,8 @@
 </head>
 <body>
   <div class="book">
-    <span class="page turn"></span>
-    <span class="cover turn"></span>
+    <span class="page turn">a</span>
+    <span class="cover turn">b</span>
   </div>
 </body>
 </html>

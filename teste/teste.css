@@ -2,7 +2,7 @@ body {
   background-color: #4F4E68;
 }
 .book {
-  position: absolute;
+
   top: 0;
   bottom: 0;
   left: 0;
@@ -22,7 +22,6 @@ body {
   top: 0.25rem;
   left: 0.25rem;
   background-color: #e9e6c4;
-  transform: rotateY(0deg);
   width: 9rem;
   height: 12rem;
   text-align: right;
@@ -33,9 +32,7 @@ body {
 
 .cover, .page {
   position: absolute;
-  padding: 1rem;
   transform-origin: 100% 0;
-  border-radius: 5px 0 0 5px;
 }
 .cover.turn {
   animation: bookCover 3s forwards;

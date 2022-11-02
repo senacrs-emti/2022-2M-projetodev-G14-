@@ -1085,6 +1085,7 @@ input#pokemonInput:active{
 	float: left;
 	background-color: #000;
 	transform: rotateY(0deg);
+
   }
 
 .right, .page{

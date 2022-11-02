@@ -91,8 +91,8 @@
             </div>
             </div>
         </div>
-        <div class="right turn" id="right">
         <div class="page turn"></div>
+        <div class="right turn" id="right">
             <div id="stats">
                 <form action="app/index.php" method="get">
                     <input type="text" name="pokemon" id="pokemonInput">
@@ -128,7 +128,7 @@
             <div id="curve1_right"></div>
             <div id="curve2_right"></div>
         </div>
-        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
