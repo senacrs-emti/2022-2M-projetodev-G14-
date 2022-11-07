@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="pokedex">
-        <div class="esquerda"></div>
-        <div class="direita"></div>
+    <div class="book">
+    <span class="page turn"></span>
+    <span class="cover"></span>
+    <span class="page"></span>
+    <span class="cover turn"></span>
     </div>
 </body>
 </html>
