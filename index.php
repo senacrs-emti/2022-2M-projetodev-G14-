@@ -104,19 +104,19 @@
                 <strong></strong><br/>
             </div>
             <div id="blueButtons1">
-            <div class="blueButton"></div>
-            <div class="blueButton"></div>
+                <div class="blueButton"></div>
+                <div class="blueButton"></div>
             <div class="blueButton"></div>
             <div class="blueButton"></div>
             <div class="blueButton"></div>
             </div>
             <div id="blueButtons2">
+                <div class="blueButton"></div>
             <div class="blueButton"></div>
             <div class="blueButton"></div>
             <div class="blueButton"></div>
             <div class="blueButton"></div>
-            <div class="blueButton"></div>
-            </div>
+        </div>
             <div id="miniButtonGlass4"></div>
             <div id="miniButtonGlass5"></div>
             <div id="barbutton3"></div>
@@ -128,6 +128,7 @@
             <div id="curve1_right"></div>
             <div id="curve2_right"></div>
         </div>
+        <div class="page turn" id="red">RED</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="main.js"></script>

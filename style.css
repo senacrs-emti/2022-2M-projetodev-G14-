@@ -1075,6 +1075,11 @@ input#pokemonInput:active{
 }
 
 /*================= TESTES ==================== */
+div#red{
+	background-color: red;
+	position: absolute;
+}
+
 .right{
 	transform: rotateY(0deg);
 }
@@ -1083,9 +1088,9 @@ input#pokemonInput:active{
 	width: 350px;
 	height: 500px;
 	float: left;
-	background-color: #000;
 	transform: rotateY(0deg);
-
+	position: absolute;
+	z-index: 5;
   }
 
 .right, .page{
