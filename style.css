@@ -1075,13 +1075,9 @@ input#pokemonInput:active{
 }
 
 /*================= TESTES ==================== */
-/*
-div#red{
-	background-color: red;
-	position: absolute;
-}
 
 .right{
+	background-color: #000;
 	transform: rotateY(0deg);
 }
 
@@ -1108,13 +1104,13 @@ div#red{
 
   @keyframes bookOpen {
 	30% { z-index: 999 }
-	100% {  transform: rotateY(180deg);
+	100% {  transform: rotateY(-180deg);
 	  z-index: 999;}
   }
   @keyframes bookCover {
 	30% { z-index: 999 }
-	100% {  transform: rotateY(180deg);
+	100% {  transform: rotateY(-180deg);
 	  z-index: 1;}
   }
+
   
-*/
