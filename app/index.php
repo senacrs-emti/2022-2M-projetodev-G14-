@@ -5,6 +5,7 @@ $nome = $_GET['pokemon'];
 function getPokemon($nome) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     $arrContextOptions=array(
         "ssl"=>array(
             "verify_peer"=>false,
@@ -30,6 +31,9 @@ function getPokemon($nome) {
         header('Location: ../index.php');
 =======
     $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
+=======
+    $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
+>>>>>>> parent of 10e0e4b (Update index.php)
 =======
     $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
 >>>>>>> parent of 10e0e4b (Update index.php)
