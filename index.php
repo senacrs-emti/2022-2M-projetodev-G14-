@@ -117,18 +117,19 @@
             <div class="blueButton"></div>
             <div class="blueButton"></div>
         </div>
+        <div id="bg_curve1_right"></div>
             <div id="miniButtonGlass4"></div>
             <div id="miniButtonGlass5"></div>
             <div id="barbutton3"></div>
             <div id="barbutton4"></div>
             <div id="yellowBox1"></div>
             <div id="yellowBox2"></div>
-            <div id="bg_curve1_right"></div>
             <div id="bg_curve2_right"></div>
             <div id="curve1_right"></div>
             <div id="curve2_right"></div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>

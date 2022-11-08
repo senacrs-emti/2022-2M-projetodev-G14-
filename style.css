@@ -734,10 +734,10 @@ input#pokemonInput:active{
 		height: 80px;
 		background-color: #fff;
 
-		border-top-right-radius: 30px;
-		-webkit-border-top-right-radius: 30px;
-		-moz-border-top-right-radius: 30px;
-		-o-border-top-right-radius: 30px;
+		border-top-right-radius: 0;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-top-right-radius: 0;
+		-o-border-top-right-radius: 0;
 	}
 
 	div#curve2_right
