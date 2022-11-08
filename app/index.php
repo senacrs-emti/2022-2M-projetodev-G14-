@@ -3,6 +3,7 @@
 
 $nome = $_GET['pokemon'];
 function getPokemon($nome) {
+<<<<<<< HEAD
     $arrContextOptions=array(
         "ssl"=>array(
             "verify_peer"=>false,
@@ -26,6 +27,17 @@ function getPokemon($nome) {
         $pokemon->types[0]->type->name, $pokemon->types[1]->type->name, $pokemon->sprites->front_default);
     }else {
         header('Location: ../index.php');
+=======
+    $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
+    $data = file_get_contents($linkApi);
+    $pokemon = json_decode($data);
+    echo 'Nome: ' . $pokemon->name . '<br>';
+    echo 'Habilidade: ' . $pokemon->abilities[0]->ability->name . '<br>';
+    echo 'Habilidade: ' . $pokemon->abilities[1]->ability->name . '<br>';
+    echo 'Tipo: ' . $pokemon->types[0]->type->name . '<br>';
+    if(isset($pokemon->types[1]->type->name)) {
+        echo 'Tipo: ' . $pokemon->types[1]->type->name;
+>>>>>>> parent of 10e0e4b (Update index.php)
     }
 }
 
