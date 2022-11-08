@@ -1,65 +1,21 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  height: 70vh;
+.flex{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1200px;
-  background: #ccc;
 }
-
-.book {
-  transform-style: preserve-3d;
-  position: relative;
-  height: 300px;
-  backface-visibility: visible;
-}
-
-.front, .back, .page1 {
-  transform-style: preserve-3d;
-  position: absolute;
+.capa {
   width: 200px;
-  height: 100%;
-  top: 0; left: 0;
-  transform-origin: left center;
-  transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+  height: 200px;
+  background-color: green;
+}
+.block {
+  width:200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  -webkit-backface-visibility:hidden;
 }
 
-.front, .back {
-  background: white;
-}
-
-.front, .page1 {
-  border-bottom-right-radius: .5em;
-  border-top-right-radius: .5em;
-}
-
-.back {
-  border-bottom-right-radius: .5em;
-  border-top-right-radius: .5em;
-}
-
-.page1 { 
-  background: #efefef;
-}
-
-
-.book:hover .front {
-  transform: rotateY(-180deg) scale(1.1);
-  /* box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2); */
-}
-
-.book:hover .page1 {
-  transform: rotateY(-180deg) scale(1.1);
-  /* box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2); */
-}
-
-.book:hover .back {
-  transform: rotateY(0deg) scale(1.1);
+.block:hover{
+  transition: 0.5s;
+  transform: translateX(200px);
+  -webkit-backface-visibility:hidden;
 }
