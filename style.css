@@ -8,7 +8,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 /* tudo dentro da caixinha branca */
 .pokemonResultado {
 	display: flex;
@@ -21,17 +20,13 @@
 .imgPokemon img{
 	max-width:100px;
 }
-/* caixa de pesquisa dos pokemon */
+
 input#pokemonInput{
 	border:1px solid black;
 	border-radius:10px;
 	background-color: #09dc09;
-	width:230px;
-	height:100px;
-	font-size: 30px;
-	display: flex;
-	margin: 0 auto 0 auto;
-
+	width: 90%;
+	margin: 7vh 0 0 2vh;
 }
 
 input#pokemonInput:hover{
@@ -734,10 +729,10 @@ input#pokemonInput:active{
 		height: 80px;
 		background-color: #fff;
 
-		border-top-right-radius: 30px;
-		-webkit-border-top-right-radius: 30px;
-		-moz-border-top-right-radius: 30px;
-		-o-border-top-right-radius: 30px;
+		border-top-right-radius: 0;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-top-right-radius: 0;
+		-o-border-top-right-radius: 0;
 	}
 
 	div#curve2_right
@@ -1075,13 +1070,9 @@ input#pokemonInput:active{
 }
 
 /*================= TESTES ==================== */
-/*
-div#red{
-	background-color: red;
-	position: absolute;
-}
 
 .right{
+	background-color: #000;
 	transform: rotateY(0deg);
 }
 
@@ -1108,13 +1099,13 @@ div#red{
 
   @keyframes bookOpen {
 	30% { z-index: 999 }
-	100% {  transform: rotateY(180deg);
+	100% {  transform: rotateY(-180deg);
 	  z-index: 999;}
   }
   @keyframes bookCover {
 	30% { z-index: 999 }
-	100% {  transform: rotateY(180deg);
+	100% {  transform: rotateY(-180deg);
 	  z-index: 1;}
   }
+
   
-*/
