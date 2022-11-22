@@ -1,43 +1,36 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 * {
 	margin: 0;
 	padding: 0;
 }
-/* tudo dentro da caixinha branca */
-.pokemonResultado {
-	display: flex;
+
+input#inputPokemonNome {
+    background-color: transparent;
+    border: none;
+    max-width: 230px;
+    font-size: 35px;
+    color:#8b0000;
+	margin-top:10px;
 }
-/* info dos pokemons (info da esquerda) */
-.infoPokemon span{
-	font-size:13px;
+input#inputPokemonNome:hover {
+    border:1px solid #0abd0a;
+    border-radius: 20px;
+    transition: 0.2s;
 }
-/* div só da imagem (para modificar a img) */
-.imgPokemon img{
-	max-width:100px;
+input#inputPokemonNome::placeholder {
+    font-size: 25px;
+    text-align: center;
+    color:#5c5c00;
 }
 
-input#pokemonInput{
-	border:1px solid black;
-	border-radius:10px;
-	background-color: #09dc09;
-	width: 90%;
-	margin: 7vh 0 0 2vh;
+div#picture img{
+	width:70%;
+	height: auto;
 }
 
-input#pokemonInput:hover{
-	border-color: 1px solid black	;
-	transition: 0.5s;
+.infoPokemon{
+	font-size: 25px;
 }
 
-input#pokemonInput:active{
-	border-color: transparent;
-	background-color: #000;
-}
 
 
 @media all {
@@ -62,12 +55,12 @@ input#pokemonInput:active{
 		width: 350px;
 		height: 500px;
 		float: left;
-		position: absolute;
+		position: relative;
 	}
 
 
 
-	/* ============== LEFT ============= */
+	/* //// LEFT PART //// */
 
 	div#curve1_left
 	{
@@ -319,6 +312,7 @@ input#pokemonInput:active{
 	div#picture
 	{
 		height: 175px;
+		width: 254px;
 		margin-top: 20px;
 		margin-bottom: 9px;
 		background-color: #fff;
@@ -406,11 +400,13 @@ input#pokemonInput:active{
 		-o-border-radius: 30px;
 	}
 
-	#bigbluebutton
+	div#bigbluebutton
 	{
 		height: 50px;
 		width: 50px;
 		background-color: #000;
+
+		cursor: pointer;
 
 		position: absolute;
 		top: 395px;
@@ -431,22 +427,6 @@ input#pokemonInput:active{
 		-moz-box-shadow: -3px 2px #001c91;
 		-o-box-shadow: -3px 2px #001c91;
 	}
-    
-    #bigbluebutton:active{
-        margin-top: 1vh;
-    }
-
-    #barbutton1:active{
-        margin-top: 1vh;
-    }
-    #barbutton2:active{
-        margin-top: 1vh;
-    }
-    #leftT:active{
-        margin-right: 1vh;
-    }
-
-
 
 	div#barbutton1
 	{
@@ -729,10 +709,10 @@ input#pokemonInput:active{
 		height: 80px;
 		background-color: #fff;
 
-		border-top-right-radius: 0;
-		-webkit-border-top-right-radius: 0;
-		-moz-border-top-right-radius: 0;
-		-o-border-top-right-radius: 0;
+		border-top-right-radius: 30px;
+		-webkit-border-top-right-radius: 30px;
+		-moz-border-top-right-radius: 30px;
+		-o-border-top-right-radius: 30px;
 	}
 
 	div#curve2_right
@@ -944,14 +924,17 @@ input#pokemonInput:active{
 
 	div#yellowBox1
 	{
-		width: 140px;
+		width: 240px;
 		height: 70px;
 		z-index: 1;
 		background-color: #ffff00;
 
 		position: absolute;
-		top: 415px;
-		left: 25px;
+		top: 315px;
+		left: 50px;
+
+        display: flex;
+        justify-content: center;
 
 		border-radius: 15px;
 		-webkit-border-radius: 15px;
@@ -964,27 +947,6 @@ input#pokemonInput:active{
 		-o-box-shadow: 0 0 20px #ff6600 inset;
 	}
 
-	div#yellowBox2
-	{
-		width: 140px;
-		height: 70px;
-		z-index: 1;
-		background-color: #ffff00;
-
-		position: absolute;
-		top: 415px;
-		left: 185px;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-
-		box-shadow: 0 0 20px #ff6600 inset;
-		-webkit-box-shadow: 0 0 20px #ff6600 inset;
-		-moz-box-shadow: 0 0 20px #ff6600 inset;
-		-o-box-shadow: 0 0 20px #ff6600 inset;
-	}
 
 }
 
@@ -1019,9 +981,9 @@ input#pokemonInput:active{
 
 	div#curve1_left
 	{
-		width: 236px;
+		width: 201px;
 		height: 85px;
-		background-color: #937c7c;
+		background-color: #8b0000;
 		float: left;
 		padding: 15px 0 0 15px;
 
@@ -1068,44 +1030,3 @@ input#pokemonInput:active{
 	}
 
 }
-
-/*================= TESTES ==================== */
-
-.right{
-	background-color: #000;
-	transform: rotateY(0deg);
-}
-
-.page {
-	width: 350px;
-	height: 500px;
-	float: left;
-	transform: rotateY(0deg);
-	position: absolute;
-	z-index: 5;
-  }
-
-.right, .page{
-	position: absolute;
-	transform-origin: 100% 0%;
-}
-.right.turn {
-	animation: bookCover 3s forwards;
-  }
-
-.page.turn {
-	animation: bookOpen 3s forwards;
-  }
-
-  @keyframes bookOpen {
-	30% { z-index: 999 }
-	100% {  transform: rotateY(-180deg);
-	  z-index: 999;}
-  }
-  @keyframes bookCover {
-	30% { z-index: 999 }
-	100% {  transform: rotateY(-180deg);
-	  z-index: 1;}
-  }
-
-  
