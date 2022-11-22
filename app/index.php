@@ -3,16 +3,8 @@
 
 $nome = $_POST['inputPokemonNome'];
 function getPokemon($nome) {
-    $arrContextOptions=array(
-        "ssl"=>array(
-            "verify_peer"=>false,
-            "verify_peer_name"=>false,
-        ),
-    );
     $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
-    // Caso de erro (ou não ache o pokemon ou escreva errado o nome do pokemon)
-    if ($data = file_get_contents($linkApi, false, stream_context_create($arrContextOptions))) {
-        $data = file_get_contents($linkApi, false, stream_context_create($arrContextOptions));
+    if ($data = file_get_contents($linkApi)) {
         $pokemon = json_decode($data);
         echo 'Nome: ' . $pokemon->name . '<br>';
         echo 'Habilidade: ' . $pokemon->abilities[0]->ability->name . '<br>';
@@ -22,13 +14,15 @@ function getPokemon($nome) {
             echo 'Tipo: ' . $pokemon->types[1]->type->name;
         }
         echo '<img src='.$pokemon->sprites->back_default;
+    
         enviarDadosPokemon($pokemon->name, $pokemon->abilities[0]->ability->name, $pokemon->abilities[1]->ability->name,
         $pokemon->types[0]->type->name, $pokemon->types[1]->type->name, $pokemon->sprites->front_default);
-    }else {
-        header('Location: ../index.php');
+        return;
     }
+    header('Location: ../index.php');
 
 }
+
 function enviarDadosPokemon($nome, $habilidade1, $habilidade2, $tipo1, $tipo2, $img){
     session_start();
     $_SESSION['pokemonProcurado'] = TRUE;
@@ -41,4 +35,8 @@ function enviarDadosPokemon($nome, $habilidade1, $habilidade2, $tipo1, $tipo2, $
     header('Location: ../index.php');
 }
 
-getPokemon($nome);
+if($_POST['inputPokemonNome'] == '') {
+    header('Location: ../index.php');
+}else{
+    getPokemon($nome);
+}
