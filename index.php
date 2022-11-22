@@ -76,6 +76,13 @@ session_start();
                 ?>
 
             </div>
+            <div id="blueButtons1">
+      <div class="blueButton"></div>
+      <div class="blueButton"></div>
+      <div class="blueButton"></div>
+      <div class="blueButton"></div>
+      <div class="blueButton"></div>
+    </div>
             <div id="yellowBox1">
                 <form action="app/index.php" method="post">
                     <input type="text" name="inputPokemonNome" id="inputPokemonNome" placeholder="Nome do Pokemon">

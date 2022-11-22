@@ -928,7 +928,7 @@ div#picture img{
 		height: 70px;
 		z-index: 1;
 		background-color: #ffff00;
-
+		margin: 10vh 0;
 		position: absolute;
 		top: 315px;
 		left: 50px;
