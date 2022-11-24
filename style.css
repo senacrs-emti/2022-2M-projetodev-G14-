@@ -325,13 +325,42 @@ div#picture img{
 		-o-border-radius: 15px;
 	}
 
+	div#picture2
+	{
+		height: 175px;
+		width: 254px;
+		margin-top: 20px;
+		margin-bottom: 9px;
+		background-color: rgb(0, 0, 0);
+		border: 3px solid #494949;
+		clear: both;
+
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-o-border-radius: 15px;
+	}
+
 	div#picture img
+	{
+		display: block;
+		margin: 0 auto;
+	}
+	}
+
+	div#picture2 img
 	{
 		display: block;
 		margin: 0 auto;
 	}
 
 	div#topPicture
+	{
+		margin: 6px auto;
+		width: 40px;
+	}
+
+	div#topPicture2
 	{
 		margin: 6px auto;
 		width: 40px;
@@ -351,12 +380,27 @@ div#picture img{
 		-o-border-radius: 15px;
 	}
 
-	div#buttontopPicture1
+
+	div#buttontopPicture12, div#buttontopPicture22
+	{
+		height: 8px;
+		width: 8px;
+		background-color: #c00d0d;
+		border: 1px solid #000;
+		float: left;
+
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-o-border-radius: 15px;
+	}
+
+	div#buttontopPicture12
 	{
 		margin-right: 20px;
 	}
 
-	div#buttonbottomPicture
+	div#buttonbottomPicture2
 	{
 		height: 26px;
 		width: 26px;
@@ -772,6 +816,25 @@ div#picture img{
 		-webkit-box-shadow: 0 0 20px #003300 inset;
 		-moz-box-shadow: 0 0 20px #003300 inset;
 		-o-box-shadow: 0 0 20px #003300 inset;
+	}
+	div#stats2
+	{
+		height: 130px;
+		width: 280px;
+		padding: 10px;
+		background-color: #000000;
+		z-index: 1;
+		font-size: 13px;
+		font-family: arial, sans-serif;
+
+		position: absolute;
+		top: 130px;
+		left: 25px;
+
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		-o-border-radius: 15px;
 	}
 
 	div#blueButtons1
