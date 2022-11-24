@@ -77,14 +77,13 @@ session_start();
 
             </div>
             <div id="blueButtons1">
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
-      <div class="blueButton"></div>
+      <div class="blueButton"><a href="app/index.php?inputPokemonNome=pikachu"><img id="pika" src="./imgs/pikachu.png"> </a></div>
+      <div class="blueButton"><a href="app/index.php?inputPokemonNome=charmander"><img id="charmander" src="./imgs/charmander.png"> </a></div>
+      <div class="blueButton"><a href="app/index.php?inputPokemonNome=pidgeot"><img id="pidgeot" src="./imgs/pidgeot.png"> </a></div>
+      <div class="blueButton"><a href="app/index.php?inputPokemonNome=magikarp"><img id="magikarp" src="./imgs/magikarp.webp"> </a></div>
     </div>
             <div id="yellowBox1">
-                <form action="app/index.php" method="post">
+                <form action="app/index.php" method="get">
                     <input type="text" name="inputPokemonNome" id="inputPokemonNome" placeholder="Nome do Pokemon">
                 </form>
             </div>

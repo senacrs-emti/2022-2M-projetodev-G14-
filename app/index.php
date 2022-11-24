@@ -1,7 +1,7 @@
 <?php
 
 
-$nome = $_POST['inputPokemonNome'];
+$nome = $_GET['inputPokemonNome'];
 function getPokemon($nome) {
     $linkApi = "https://pokeapi.co/api/v2/pokemon/$nome";
     if ($data = file_get_contents($linkApi)) {
@@ -35,7 +35,7 @@ function enviarDadosPokemon($nome, $habilidade1, $habilidade2, $tipo1, $tipo2, $
     header('Location: ../index.php');
 }
 
-if($_POST['inputPokemonNome'] == '') {
+if($_GET['inputPokemonNome'] == '') {
     header('Location: ../index.php');
 }else{
     getPokemon($nome);

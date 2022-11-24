@@ -794,8 +794,8 @@ div#picture img{
 
 	div.blueButton
 	{
-		height: 35px;
-		width : 45px;
+		height: 10vh;
+		width : 10vh;
 		background-color: #003300;
 		float: left;
 		margin-right: 7px;
@@ -1029,4 +1029,24 @@ div#picture img{
 		display: none;
 	}
 
+}
+
+#pika{
+	width: 6vh;
+	margin: 0.5vh 0 0 2vh;
+}
+
+#charmander{
+	width: 7vh;
+	margin: 1vh 0 0 2vh;
+}
+
+#pidgeot{
+	width: 8vh;
+	margin: 0.5vh 0 0 1.5vh;
+}
+
+#magikarp{
+	width: 10vh;
+	margin: 0 0 0 0.5vh;
 }
