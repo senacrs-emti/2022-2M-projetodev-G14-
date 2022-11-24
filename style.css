@@ -843,7 +843,7 @@ div#picture img{
 
 		position: absolute;
 		top: 295px;
-		left: 49px;
+		left:70px;
 	}
 
 	div#blueButtons2
@@ -1100,13 +1100,13 @@ div#picture img{
 }
 
 #charmander{
-	width: 7vh;
+	width: 6vh;
 	margin: 1vh 0 0 2vh;
 }
 
 #pidgeot{
-	width: 8vh;
-	margin: 0.5vh 0 0 1.5vh;
+	width: 5vh;
+	margin: 0.5vh 0 0 2.5vh;
 }
 
 #magikarp{
