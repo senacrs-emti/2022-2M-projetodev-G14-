@@ -3,7 +3,8 @@
 class ProcurarPokemon
 {
     public static function procurar($nomePokemon)
-    {
+    {   
+        $nomePokemon = strtolower($nomePokemon);
         $api = "https://pokeapi.co/api/v2/pokemon/$nomePokemon";
         if ($data = file_get_contents($api)) {
             $result = json_decode($data);
@@ -15,7 +16,7 @@ class ProcurarPokemon
             }else {
                 $dataObj->tipos = array($result->types[0]->type->name);
             }
-            $dataObj->img = $result->sprites->back_default;
+            $dataObj->img = $result->sprites->front_default;
             
             return $dataObj;
         }

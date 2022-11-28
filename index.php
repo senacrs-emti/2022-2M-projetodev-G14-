@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -40,13 +39,22 @@ var_dump($_SESSION);
                 </div>
                 <div id="picture">
                     <!-- TODO: IMAGEM DO POKEMON -->
-                    
-                    <?php
-                    
-                    if (isset($_SESSION['pokemonProcurado'])) {
-                        echo '<img class="imgPokemon" src="'.$_SESSION['imgPokemon'].'">';
-                    }
 
+                    <?php
+                        if (isset($_COOKIE['tipoProcura'])) {
+                            switch ($_COOKIE['tipoProcura']) {
+                                case 'pokemon':
+                                    if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                        echo '<img id="imgPokemon" src="'.$_SESSION['result']->img.'">';
+                                    }
+                                    break;
+                                case 'cachorro':
+                                    if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                        echo '<img id="imgCachorro" src="'.$_SESSION['result']->imagem.'">';
+                                    }
+                                    break;
+                            };
+                        }
                     ?>
 
                 </div>
@@ -62,39 +70,42 @@ var_dump($_SESSION);
         <div id="right">
             <div id="stats">
                 <!-- TODO: ESTATISTICAS DO POKEMON -->
-
                 <?php
-                
-                if (isset($_COOKIE['tipoProcura'])) {
-                    switch($_COOKIE['tipoProcura']) {
-                        case 'pokemon':
-                            echo 'Procurando pokemons';
-                            break;
-                        case 'cachorro':
-                            echo 'Procurando cachorros';
-                            break;
-                    };
-                }
-                if (isset($_SESSION['result'])) {
-                    echo '<pre>';
-                    print_r($_SESSION['result']->nome);
-                    echo '</pre>';
-                }
-
+                    if (isset($_COOKIE['tipoProcura'])) {
+                        switch ($_COOKIE['tipoProcura']) {
+                            case 'pokemon':
+                                echo 'Procurando pokemons';
+                                if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                    echo '<h2> <b>Nome:</b>'.$_SESSION['result']->nome.'</h2>';
+                                    echo '<h3> <b>Habilidades:</b> <br>'.$_SESSION['result']->habilidades[0].'</h3>';
+                                    if(isset($_SESSION['result']->habilidades[1])) {
+                                      echo '<h3>'.$_SESSION['result']->habilidades[1].'</h3>';
+                                    }
+                                    echo '<h3> <b>Tipo:</b> <br>'.$_SESSION['result']->tipos[0].'</h3>';
+                                    if(isset($_SESSION['result']->tipos[1])) {
+                                        echo '<h3>'.$_SESSION['result']->tipos[1].'</h3>';
+                                    }
+                                }
+                                break;
+                            case 'cachorro':
+                                echo 'Procurando cachorros';
+                                if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                    echo '<h2> <b>Nome:</b>'.utf8_encode($_SESSION['result']->nome).'</h2>';
+                                    echo '<h3> <b>Caracteristicas:</b> <br>'.utf8_encode($_SESSION['result']->caracteristicas).'</h3>';
+                                }
+                                break;
+                        };
+                    }
                 ?>
 
             </div>
-            <div id="blueButtons1">
-      <div class="blueButton" id="pokemonBtn"><img id="pika" src="./imgs/pikachu.png"> </a></div>
-      <div class="blueButton" id="cachorroBtn"><img id="charmander" src="./imgs/dog.gif"> </a></div>
-      <div class="blueButton"><a href="app/index.php?inputPokemonNome=pidgeot"><img id="pidgeot" src="./imgs/Gato.png"> </a></div>
-    </div>
             <div id="yellowBox1">
                 <form action="app/index.php" method="get">
-                    <input type="text" name="inputPokemonNome" id="inputPokemonNome" placeholder="Nome do Pokemon">
+                    <input type="text" name="inputNome" id="inputNome" placeholder="<?php echo (@$_COOKIE['tipoProcura'] == false)? 'Escolha um modo' : 'Nome do '.$_COOKIE['tipoProcura'] ?>">
                 </form>
             </div>
-            <!-- <div id="yellowBox2"></div> -->
+            <div id="barbutton3"></div>
+            <div id="barbutton4"></div>
             <div id="bg_curve1_right"></div>
             <div id="bg_curve2_right"></div>
             <div id="curve1_right"></div>

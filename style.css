@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-input#inputPokemonNome {
+input#inputNome {
     background-color: transparent;
     border: none;
     max-width: 230px;
@@ -11,20 +11,28 @@ input#inputPokemonNome {
     color:#8b0000;
 	margin-top:10px;
 }
-input#inputPokemonNome:hover {
+input#inputNome:hover {
     border:1px solid #0abd0a;
     border-radius: 20px;
     transition: 0.2s;
 }
-input#inputPokemonNome::placeholder {
+input#inputNome::placeholder {
     font-size: 25px;
     text-align: center;
     color:#5c5c00;
 }
 
-div#picture img{
-	width:70%;
+/* div#picture img{
+	max-width: 70%;
+	max-height: 70%;
 	height: auto;
+} */
+div#picture img#imgPokemon {
+	width: 70%;
+}
+div#picture img#imgCachorro {
+	max-width: 200px;
+	max-height: 150px;
 }
 
 .infoPokemon{
@@ -311,7 +319,7 @@ div#picture img{
 
 	div#picture
 	{
-		height: 175px;
+		height:175px;
 		width: 254px;
 		margin-top: 20px;
 		margin-bottom: 9px;
@@ -844,6 +852,8 @@ div#picture img{
 		position: absolute;
 		top: 295px;
 		left:70px;
+		display: flex;
+		justify-content: center;
 	}
 
 	div#blueButtons2
@@ -857,8 +867,8 @@ div#picture img{
 
 	div.blueButton
 	{
-		height: 10vh;
-		width : 10vh;
+		height: 4rem;
+		width : 4rem;
 		background-color: #003300;
 		float: left;
 		margin-right: 7px;
@@ -878,6 +888,10 @@ div#picture img{
 		-moz-box-shadow: -1px 2px #001c91;
 		-o-box-shadow: -1px 2px #001c91;
 	}
+	div.blueButton img 
+	{
+		max-width: 2rem;
+	}
 
 	div#barbutton3
 	{
@@ -886,7 +900,7 @@ div#picture img{
 		z-index: 1;
 
 		position: absolute;
-		top: 385px;
+		top: 365px;
 		left: 210px;
 
 		border-radius: 100px;
@@ -903,6 +917,8 @@ div#picture img{
 		-webkit-box-shadow: -1px 2px #004200;
 		-moz-box-shadow: -1px 2px #004200;
 		-o-box-shadow: -1px 2px #004200;
+
+		cursor: pointer;
 	}
 
 	div#barbutton4
@@ -912,7 +928,7 @@ div#picture img{
 		z-index: 1;
 
 		position: absolute;
-		top: 385px;
+		top: 365px;
 		left: 270px;
 
 		border-radius: 100px;
@@ -920,15 +936,17 @@ div#picture img{
 		-moz-border-radius: 100px;
 		-o-border-radius: 100px;
 
-		background: linear-gradient(top, #fb6505 0%, #bb0505 100%);	
-		background: -webkit-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -moz-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -o-linear-gradient(top, #fb6505 0%, #bb0505 100%);
+		background: linear-gradient(top, #50fb05 0%, #057b05 100%);	
+		background: -webkit-linear-gradient(top, #50fb05 0%, #057b05 100%);
+		background: -moz-linear-gradient(top, #50fb05 0%, #057b05 100%);
+		background: -o-linear-gradient(top, #50fb05 0%, #057b05 100%);
 
-		box-shadow: -1px 2px #7b0000;
-		-webkit-box-shadow: -1px 2px #7b0000;
-		-moz-box-shadow: -1px 2px #7b0000;
-		-o-box-shadow: -1px 2px #7b0000;
+		box-shadow: -1px 2px #004200;
+		-webkit-box-shadow: -1px 2px #004200;
+		-moz-box-shadow: -1px 2px #004200;
+		-o-box-shadow: -1px 2px #004200;
+
+		cursor:	pointer;
 	}
 
 	div#miniButtonGlass4

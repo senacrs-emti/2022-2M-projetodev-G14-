@@ -1,10 +1,10 @@
 const botaoIniciar = document.getElementById("bigbluebutton")
-const inputPokemonNome = document.getElementById("inputPokemonNome")
-const pokemonBtn = document.getElementById("pokemonBtn")
-const cachorroBtn = document.getElementById("cachorroBtn");
+const inputNome = document.getElementById("inputNome")
+const pokemonBtn = document.getElementById("barbutton3")
+const cachorroBtn = document.getElementById("barbutton4");
 
 botaoIniciar.addEventListener("click", () => {
-    inputPokemonNome.focus()
+    inputNome.focus()
 });
 
 pokemonBtn.addEventListener("click", () => {

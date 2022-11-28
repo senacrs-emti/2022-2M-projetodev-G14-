@@ -3,12 +3,12 @@
 require 'ProcurarPokemon.php';
 require 'ProcurarCachorro.php';
 
-if($_GET['inputPokemonNome'] == '') {
+if($_GET['inputNome'] == '') {
     header('Location: ../index.php');
     return;
 }
 
-$nome = $_GET['inputPokemonNome'];
+$nome = $_GET['inputNome'];
 switch($_COOKIE['tipoProcura']) {
     case 'pokemon':
         session_start();
@@ -22,6 +22,8 @@ switch($_COOKIE['tipoProcura']) {
         break;
     
     default:
-        echo 'erro';
+        session_start();
+        $_SESSION['result'] = 'Escolha um modo';
+        header('Location: ../index.php');
         break;
 }
