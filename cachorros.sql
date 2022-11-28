@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Nov-2022 às 16:13
--- Versão do servidor: 10.4.17-MariaDB
--- versão do PHP: 7.3.27
+-- Tempo de geração: 29-Nov-2022 às 00:23
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,16 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cachorros` (
   `ID` int(11) NOT NULL,
-  `Nome` varchar(100) NOT NULL,
-  `Caracteristicas` varchar(100) NOT NULL,
-  `Imagem` text NOT NULL
+  `nome` varchar(100) NOT NULL,
+  `caracteristicas` varchar(100) NOT NULL,
+  `imagem` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `cachorros`
 --
 
-INSERT INTO `cachorros` (`ID`, `Nome`, `Caracteristicas`, `Imagem`) VALUES
+INSERT INTO `cachorros` (`ID`, `nome`, `caracteristicas`, `imagem`) VALUES
 (1, 'Akita', 'Leal, amigo e brincalhao', 'https://static1.patasdacasa.com.br/articles/4/33/4/@/1000-conheca-tudo-sobre-o-cachorro-akita-inu-articles_media_mobile-2.jpg'),
 (2, 'Basset hound', 'Paciente, teimoso e charmoso', 'https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3268532:1660848472/Basset-Hound.jpg?f=16x9&h=720&q=0.8&w=1280&$p$f$h$q$w=5386dc1'),
 (3, 'Beagle', 'Alegre, companheiro e aventureiro', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Beagle_Faraon.JPG/1200px-Beagle_Faraon.JPG'),
