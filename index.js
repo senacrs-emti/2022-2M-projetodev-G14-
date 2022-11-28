@@ -1,19 +1,18 @@
 const botaoIniciar = document.getElementById("bigbluebutton")
 const inputPokemonNome = document.getElementById("inputPokemonNome")
+const pokemonBtn = document.getElementById("pokemonBtn")
+const cachorroBtn = document.getElementById("cachorroBtn");
 
 botaoIniciar.addEventListener("click", () => {
     inputPokemonNome.focus()
 });
 
+pokemonBtn.addEventListener("click", () => {
+    document.cookie="tipoProcura=pokemon";
+    location.reload();
+})
 
-$(document).ready(function() {
-
-    $('#bigbluebutton').click(function(){
-        
-            success: function(results){
-                $(".tela").html(results);
-            }
-        });
-    });
-
-});
+cachorroBtn.addEventListener("click", () => {
+    document.cookie="tipoProcura=cachorro";
+    location.reload();
+})

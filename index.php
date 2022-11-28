@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -64,21 +65,28 @@ session_start();
 
                 <?php
                 
-                if (isset($_SESSION['pokemonProcurado'])) {
-                    echo '<div class="infoPokemon">';
-                        echo '<strong>Nome:</strong>'.$_SESSION['nomePokemon'].'<br/>';
-                        echo '<strong>Tipo:</strong>'.$_SESSION['tipo1Pokemon'].'<br/>';
-                        echo '<strong>Habilidade:</strong>'.$_SESSION['habilidade1Pokemon'].'<br/>';
-                        echo '<strong>Habilidade:</strong>'.$_SESSION['habilidade2Pokemon'].'<br/>';
-                    echo '</div>';
+                if (isset($_COOKIE['tipoProcura'])) {
+                    switch($_COOKIE['tipoProcura']) {
+                        case 'pokemon':
+                            echo 'Procurando pokemons';
+                            break;
+                        case 'cachorro':
+                            echo 'Procurando cachorros';
+                            break;
+                    };
+                }
+                if (isset($_SESSION['result'])) {
+                    echo '<pre>';
+                    print_r($_SESSION['result']->nome);
+                    echo '</pre>';
                 }
 
                 ?>
 
             </div>
             <div id="blueButtons1">
-      <div class="blueButton"><a href="app/index.php?inputPokemonNome=pikachu"><img id="pika" src="./imgs/pikachu.png"> </a></div>
-      <div class="blueButton"><a href="app/index.php?inputPokemonNome=charmander"><img id="charmander" src="./imgs/dog.gif"> </a></div>
+      <div class="blueButton" id="pokemonBtn"><img id="pika" src="./imgs/pikachu.png"> </a></div>
+      <div class="blueButton" id="cachorroBtn"><img id="charmander" src="./imgs/dog.gif"> </a></div>
       <div class="blueButton"><a href="app/index.php?inputPokemonNome=pidgeot"><img id="pidgeot" src="./imgs/Gato.png"> </a></div>
     </div>
             <div id="yellowBox1">
