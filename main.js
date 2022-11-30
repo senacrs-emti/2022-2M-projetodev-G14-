@@ -1,10 +1,11 @@
 const botaoIniciar = document.getElementById("bigbluebutton")
 const inputNome = document.getElementById("inputNome")
-const pokemonBtn = document.getElementById("barbutton3")
-const cachorroBtn = document.getElementById("barbutton4");
+const pokemonBtn = document.getElementById("miniButtonGlass1")
+const cachorroBtn = document.getElementById("miniButtonGlass2");
+const gatoBtn = document.getElementById("miniButtonGlass3");
 
 botaoIniciar.addEventListener("click", () => {
-    inputNome.focus()
+    inputNome.focus();
 });
 
 pokemonBtn.addEventListener("click", () => {
@@ -14,5 +15,10 @@ pokemonBtn.addEventListener("click", () => {
 
 cachorroBtn.addEventListener("click", () => {
     document.cookie="tipoProcura=cachorro";
+    location.reload();
+})
+
+gatoBtn.addEventListener("click", () => {
+    document.cookie="tipoProcura=gato";
     location.reload();
 })

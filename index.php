@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css.css">
     <title>Pokedex</title>
 </head>
 
@@ -53,6 +53,10 @@ session_start();
                                         echo '<img id="imgCachorro" src="'.$_SESSION['result']->imagem.'">';
                                     }
                                     break;
+                                case 'gato':
+                                    if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                        echo '<img id="imgGato" src="'.$_SESSION['result']->imagem.'">';
+                                    }
                             };
                         }
                     ?>
@@ -94,6 +98,12 @@ session_start();
                                     echo '<h3> <b>Caracteristicas:</b> <br>'.utf8_encode($_SESSION['result']->caracteristicas).'</h3>';
                                 }
                                 break;
+                            case 'gato':
+                                echo 'Procurando gatos';
+                                if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
+                                    echo '<h2> <b>Nome:</b>'.utf8_encode($_SESSION['result']->nome).'</h2>';
+                                    echo '<h3> <b>Caracteristicas:</b> <br>'.utf8_encode($_SESSION['result']->caracteristicas).'</h3>';
+                                }
                         };
                     }
                 ?>
@@ -104,8 +114,6 @@ session_start();
                     <input type="text" name="inputNome" id="inputNome" placeholder="<?php echo (@$_COOKIE['tipoProcura'] == false)? 'Escolha um modo' : 'Nome do '.$_COOKIE['tipoProcura'] ?>">
                 </form>
             </div>
-            <div id="barbutton3"></div>
-            <div id="barbutton4"></div>
             <div id="bg_curve1_right"></div>
             <div id="bg_curve2_right"></div>
             <div id="curve1_right"></div>
@@ -113,7 +121,7 @@ session_start();
         </div>
     </div>
 
-    <script src="index.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

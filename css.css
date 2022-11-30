@@ -34,6 +34,14 @@ div#picture img#imgCachorro {
 	max-width: 200px;
 	max-height: 150px;
 }
+div#picture img#imgGato {
+	max-width: 200px;
+	max-height: 150px;
+}
+div#picture img{
+	max-width: 200px;
+	max-height: 150px;
+}
 
 .infoPokemon{
 	font-size: 25px;

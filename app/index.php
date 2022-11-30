@@ -2,6 +2,7 @@
 
 require 'ProcurarPokemon.php';
 require 'ProcurarCachorro.php';
+require 'ProcurarGatos.php';
 
 if($_GET['inputNome'] == '') {
     header('Location: ../index.php');
@@ -20,7 +21,12 @@ switch($_COOKIE['tipoProcura']) {
         $_SESSION['result'] = ProcurarCachorro::procurar($nome);
         header('Location: ../index.php');
         break;
-    
+    case 'gato':
+        session_start();
+        $_SESSION['result'] = ProcurarGatos::procurar($nome);
+        header('Location: ../index.php');
+        break;
+        
     default:
         session_start();
         $_SESSION['result'] = 'Escolha um modo';
