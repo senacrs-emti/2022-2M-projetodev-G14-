@@ -47,9 +47,7 @@ div#picture img{
 	font-size: 25px;
 }
 
-div#miniButtonGlass1:hover, div#miniButtonGlass2:hover, div#miniButtonGlass3:hover{
-	cursor: pointer;
-}
+
 
 @media all {
 

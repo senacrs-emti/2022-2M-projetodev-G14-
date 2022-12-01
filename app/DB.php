@@ -12,7 +12,7 @@ class DB
         try {
             return $conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
         }catch(Exception $e) {
-            echo 'Erro DB -> '.$e->getMessage();
+            echo $e->getMessage();
         }
     }
 }
