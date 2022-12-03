@@ -22,3 +22,11 @@ gatoBtn.addEventListener("click", () => {
     document.cookie="tipoProcura=gato";
     location.reload();
 })
+
+// RESET COOKIES
+document.addEventListener("keypress", (e) => {
+    if(e.key == '?') {
+        document.cookie="tipoProcura=";
+        location.reload();
+    }
+})

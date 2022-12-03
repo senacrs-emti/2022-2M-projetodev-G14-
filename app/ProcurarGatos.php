@@ -4,6 +4,7 @@ class ProcurarGatos
 {
     public static function procurar($nome)
     {
+        $nome = strtolower($nome);
         $nome = ucfirst($nome);
         try {
             include_once 'DB.php';

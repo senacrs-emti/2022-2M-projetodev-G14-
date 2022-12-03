@@ -375,7 +375,7 @@ div#miniButtonGlass1:hover, div#miniButtonGlass2:hover, div#miniButtonGlass3:hov
 	div#topPicture
 	{
 		margin: 6px auto;
-		width: 40px;
+		width: 52px;
 	}
 
 	div#topPicture2
@@ -388,6 +388,7 @@ div#miniButtonGlass1:hover, div#miniButtonGlass2:hover, div#miniButtonGlass3:hov
 	{
 		height: 8px;
 		width: 8px;
+		margin-left: 10px;
 		background-color: #c00d0d;
 		border: 1px solid #000;
 		float: left;
