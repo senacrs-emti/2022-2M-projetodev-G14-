@@ -38,7 +38,7 @@ session_start();
                     <div id="buttontopPicture2"></div>
                 </div>
                 <div id="picture">
-                    <!-- TODO: IMAGEM DO POKEMON -->
+                    <!-- TODO: IMAGEM -->
 
                     <?php
                         if (isset($_COOKIE['tipoProcura'])) {
@@ -73,7 +73,7 @@ session_start();
         </div>
         <div id="right">
             <div id="stats">
-                <!-- TODO: ESTATISTICAS DO POKEMON -->
+                <!-- TODO: ESTATISTICAS -->
                 <?php
                     if (isset($_COOKIE['tipoProcura'])) {
                         switch ($_COOKIE['tipoProcura']) {
@@ -94,8 +94,8 @@ session_start();
                             case 'cachorro':
                                 echo 'Procurando cachorros';
                                 if (isset($_SESSION['result']) && $_SESSION['result'] != FALSE) {
-                                    echo '<h2> <b>Nome:</b>'.$_SESSION['result']->nome.'</h2>';
-                                    echo '<h3> <b>Caracteristicas:</b> <br>'.$_SESSION['result']->caracteristicas.'</h3>';
+                                    echo '<h2> <b>Nome:</b>'.utf8_encode($_SESSION['result']->nome).'</h2>';
+                                    echo '<h3> <b>Caracteristicas:</b> <br>'.utf8_encode($_SESSION['result']->caracteristicas).'</h3>';
                                 }
                                 break;
                             case 'gato':
